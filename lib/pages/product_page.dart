@@ -18,12 +18,7 @@ class ProductDetailPage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            Image.network(
-              product.imageUrl,
-              height: 250,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
+            Image.asset(""),
             const SizedBox(height: 20),
             Text(
               product.name,

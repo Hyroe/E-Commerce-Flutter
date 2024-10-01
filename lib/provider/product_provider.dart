@@ -8,7 +8,7 @@ class ProductProvider with ChangeNotifier {
   List<Product> get products => _products;
 
   Future<void> fetchProducts() async {
-    // _products = await ProductApi.getProducts();
+    _products = await ProductAPI.getProducts();
     notifyListeners();
   }
 }

@@ -1,5 +1,4 @@
-import 'package:e_commerce/pages/home_page.dart';
-import 'package:e_commerce/pages/login_page.dart';
+import 'package:e_commerce/routes.dart';
 import 'package:e_commerce/utils/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +13,8 @@ class MyApp extends StatelessWidget {
       title: 'Shop.CO',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme, 
-      //home: LoginPage(),  
-      home: HomePage(), 
+      initialRoute: '/login',  
+      routes: routes,
     );
   }
 }

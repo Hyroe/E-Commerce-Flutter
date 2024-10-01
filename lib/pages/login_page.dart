@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SHOP.CO', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text('SHOP.CO',
+            style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -62,7 +56,6 @@ class LoginPage extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  // Navegar a la pantalla de recuperación de contraseña
                 },
                 child: const Text('Forgot Password?'),
               ),
@@ -77,7 +70,6 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                // Acción de iniciar sesión
               },
               child: const Text(
                 'Login',
@@ -91,30 +83,12 @@ class LoginPage extends StatelessWidget {
                 const Text("Don't have an account? "),
                 TextButton(
                   onPressed: () {
-                    // Navegar a la pantalla de registro
-                  },
+                    Navigator.pushNamed(context, '/register');},
                   child: const Text('Sign Up'),
                 ),
               ],
             ),
             const SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  icon: const Icon(Icons.facebook, color: Colors.blue),
-                  onPressed: () {
-                    // Acción de login con Facebook
-                  },
-                ),
-                IconButton(
-                  icon: const Icon(FontAwesomeIcons.google),
-                  onPressed: () {
-                    // Acción de login con Google
-                  },
-                ),
-              ],
-            ),
           ],
         ),
       ),
